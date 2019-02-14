@@ -17,6 +17,9 @@
 /// proxied into by the Phoenix wrapper for the Apple stack.  It should not
 /// respond directly to events, but instead be used by an intermediate layer,
 /// where additional behavior may be added via subclassing.
+///
+/// Note that it conforms to the MTKViewDelegate protocol directly, so it may be
+/// used directly in UI tests, or subclassed, etc.
 @interface PHXRenderer : NSObject<MTKViewDelegate>
 
 + (nullable instancetype)makeWithView:(nonnull MTKView *)view;

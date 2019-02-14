@@ -28,6 +28,7 @@
 - (void) updateToSize:(MTLSize)size;
 
 - (void) drawInView:(nonnull MTKView *)view;
+
 @end
 
 #endif /* ResourceManager_hpp */

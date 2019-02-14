@@ -7,8 +7,8 @@
 
 @import MetalKit;
 
-#include "ResourceManager.hpp"
 #include "Renderer.hpp"
+#include "ResourceManager.hpp"
 
 @implementation PHXRenderer {
     PHXResourceManager* _manager;
@@ -26,18 +26,15 @@
     auto manager = [PHXResourceManager makeWithDevice:view.device
                                              withView:view
                                        withFullscreen:YES];
-    
     if (!manager) {
         NSLog(@"Failed to create resource manager for PHXRenderer");
         return nil;
     }
     
     tmp->_manager = manager;
-    
-    auto fmt = MTLPixelFormatRGBA8Unorm;
+
     NSError *err = NULL;
-    
-    [manager loadShadersWithFormat:fmt withError:err];
+    [manager loadShadersWithFormat:MTLPixelFormatRGBA8Unorm withError:err];
     if (err) {
         NSLog(@"Failed to load shaders: %@", err);
         return nil;
