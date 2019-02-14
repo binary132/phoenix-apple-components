@@ -28,8 +28,8 @@ typedef struct
 // Vertex Function
 vertex VertexPosition
 vertexShader(uint vertexID [[ vertex_id ]],
-             constant AAPLVertex *vertexArray [[ buffer(AAPLVertexInputIndexVertices) ]],
-             constant vector_uint2 *viewportSizePointer  [[ buffer(AAPLVertexInputIndexViewportSize) ]])
+             constant PHXVertex *vertexArray [[ buffer(PHXVertexInputIndexVertices) ]],
+             constant vector_uint2 *viewportSizePointer  [[ buffer(PHXVertexInputIndexViewportSize) ]])
 
 {
     
@@ -71,10 +71,10 @@ vertexShader(uint vertexID [[ vertex_id ]],
 // Fragment function
 fragment float4
 fragmentShader(VertexPosition in [[stage_in]],
-                               texture2d<half> colorTexture [[ texture(AAPLTextureIndexOutput) ]])
+               metal::texture2d<half> colorTexture [[ texture(PHXTextureIndexOutput) ]])
 {
-    constexpr sampler textureSampler (mag_filter::linear,
-                                      min_filter::linear);
+    constexpr metal::sampler textureSampler (metal::mag_filter::linear,
+                                             metal::min_filter::linear);
     
     // Sample the texture and return the color to colorSample
     const half4 colorSample = colorTexture.sample (textureSampler, in.textureCoordinate);
@@ -88,9 +88,9 @@ fragmentShader(VertexPosition in [[stage_in]],
 //
 //// Grayscale compute kernel
 //kernel void
-//grayscaleKernel(texture2d<half, access::read>  inTexture  [[texture(AAPLTextureIndexInput)]],
-//                texture2d<half, access::write> outTexture [[texture(AAPLTextureIndexOutput)]],
-//                constant float* seconds [[buffer(AAPLTextureIndexTime)]],
+//grayscaleKernel(texture2d<half, access::read>  inTexture  [[texture(PHXTextureIndexInput)]],
+//                texture2d<half, access::write> outTexture [[texture(PHXTextureIndexOutput)]],
+//                constant float* seconds [[buffer(PHXTextureIndexTime)]],
 //                uint2                          gid         [[thread_position_in_grid]])
 //{
 //    // Check if the pixel is within the bounds of the output texture
