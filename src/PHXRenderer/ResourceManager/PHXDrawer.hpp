@@ -5,8 +5,8 @@
 //  Created by Bodie Solomon on 2/12/19.
 //
 
-#ifndef PHX_Drawer_h
-#define PHX_Drawer_h
+#ifndef PHX_RM_Drawer_hpp
+#define PHX_RM_Drawer_hpp
 
 @import MetalKit;
 
@@ -23,4 +23,4 @@
 
 @end
 
-#endif /* PHX_Drawer_h */
+#endif /* PHX_RM_Drawer_hpp */

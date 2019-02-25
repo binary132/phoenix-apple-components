@@ -5,9 +5,9 @@
 //  Created by Bodie Solomon on 2/12/19.
 //
 
-#import "Drawer.hpp"
+#import "PHXDrawer.hpp"
 
-#import "Shaders.h"
+#import "PHXShaders.h"
 
 @implementation PHXDrawer
 

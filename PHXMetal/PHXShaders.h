@@ -5,8 +5,8 @@
 //  Created by Bodie Solomon on 2/7/19.
 //
 
-#ifndef Shaders_h
-#define Shaders_h
+#ifndef PHX_PHXMetal_Shaders_h
+#define PHX_PHXMetal_Shaders_h
 
 #include <simd/simd.h>
 
@@ -40,4 +40,4 @@ typedef struct
     vector_float2 textureCoordinate;
 } PHXVertex;
 
-#endif /* Shaders_h */
+#endif /* PHX_PHXMetal_Shaders_h */

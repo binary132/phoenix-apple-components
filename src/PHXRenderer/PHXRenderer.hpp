@@ -5,12 +5,24 @@
 //  Created by Bodie Solomon on 2/7/19.
 //
 
-#ifndef Renderer_h
-#define Renderer_h
+#ifndef PHX_PHXRenderer_hpp
+#define PHX_PHXRenderer_hpp
 
 @import MetalKit;
 
-#include "ResourceManager.hpp"
+#include "PHXResourceManager.hpp"
+
+@protocol PHXRenderer<MTKViewDelegate>
+
++ (nullable instancetype)makeWithView:(nonnull MTKView *)view
+                       withFullscreen:(BOOL)fullscreen;
+
+- (void) update;
+- (void) clear;
+- (void) draw;
+- (void) drawPointAt:(simd_int2)point withColor:(MTLClearColor)color;
+
+@end
 
 /// PHXRenderer is the core implementation of the Renderer class for Phoenix
 /// using Apple's Metal APIs.  It also serves as a MTKViewDelegate which may be
@@ -20,10 +32,8 @@
 ///
 /// Note that it conforms to the MTKViewDelegate protocol directly, so it may be
 /// used directly in UI tests, or subclassed, etc.
-@interface PHXRenderer : NSObject<MTKViewDelegate>
-
-+ (nullable instancetype)makeWithView:(nonnull MTKView *)view;
+@interface PHXMetalRenderer : NSObject<PHXRenderer>
 
 @end
 
-#endif /* Renderer_h */
+#endif /* PHX_PHXRenderer_hpp */

@@ -9,7 +9,11 @@
 #import <Metal/Metal.h>
 #import <MetalKit/MetalKit.h>
 
+#import "Renderer.hpp"
+
 // Our macOS view controller.
 @interface GameViewController : NSViewController
+
+@property PHXRenderer* renderer;
 
 @end

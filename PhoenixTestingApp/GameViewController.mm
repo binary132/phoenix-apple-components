@@ -9,16 +9,15 @@
 
 #import "Renderer.hpp"
 
-@implementation GameViewController
-{
+@implementation GameViewController {
     MTKView *_view;
-
-    PHXRenderer *_renderer;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.identifier = @"View controller";
 
     _view = (MTKView *)self.view;
 
@@ -31,7 +30,7 @@
         return;
     }
 
-    _renderer = [PHXRenderer makeWithView:_view];
+    _renderer = [PHXRenderer makeWithView:_view withFullscreen:NO];
 
     [_renderer mtkView:_view drawableSizeWillChange:_view.bounds.size];
 

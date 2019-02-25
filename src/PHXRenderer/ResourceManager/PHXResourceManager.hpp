@@ -5,8 +5,8 @@
 //  Created by Bodie Solomon on 2/8/19.
 //
 
-#ifndef ResourceManager_hpp
-#define ResourceManager_hpp
+#ifndef PHX_ResourceManager_hpp
+#define PHX_ResourceManager_hpp
 
 @import MetalKit;
 
@@ -31,4 +31,4 @@
 
 @end
 
-#endif /* ResourceManager_hpp */
+#endif /* PHX_ResourceManager_hpp */

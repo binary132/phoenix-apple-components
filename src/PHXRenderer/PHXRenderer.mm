@@ -7,30 +7,31 @@
 
 @import MetalKit;
 
-#include "Renderer.hpp"
-#include "ResourceManager.hpp"
+#include "PHXRenderer.hpp"
+#include "PHXResourceManager.hpp"
 
-@implementation PHXRenderer {
+@implementation PHXMetalRenderer {
     PHXResourceManager* _manager;
 }
 
-+ (nullable instancetype)makeWithView:(nonnull MTKView *)view {
-    
-    PHXRenderer* tmp = [[super alloc] init];
-    
++ (nullable instancetype)makeWithView:(nonnull MTKView *)view
+                       withFullscreen:(BOOL)fullscreen {
+
+    PHXMetalRenderer* tmp = [[super alloc] init];
+
     if (!tmp) {
         NSLog(@"Failed to allocate PHXRenderer");
         return nil;
     }
-    
+
     auto manager = [PHXResourceManager makeWithDevice:view.device
                                              withView:view
-                                       withFullscreen:YES];
+                                       withFullscreen:fullscreen];
     if (!manager) {
         NSLog(@"Failed to create resource manager for PHXRenderer");
         return nil;
     }
-    
+
     tmp->_manager = manager;
 
     NSError *err = NULL;
@@ -39,20 +40,36 @@
         NSLog(@"Failed to load shaders: %@", err);
         return nil;
     }
-    
+
     [manager prepareTexturesWithCGSize:view.drawableSize];
-    
+
     [manager createCommandQueue];
-    
+
     return tmp;
 }
 
-- (void)drawInMTKView:(nonnull MTKView *)view { 
+- (void)drawInMTKView:(nonnull MTKView *)view {
     [_manager drawInView:view];
 }
 
 - (void)mtkView:(nonnull MTKView *)view drawableSizeWillChange:(CGSize)size {
     [_manager updateToCGSize:size];
+}
+
+- (void) update {
+
+}
+
+- (void) clear {
+
+}
+
+- (void) draw {
+
+}
+
+- (void) drawPointAt:(simd_int2)point withColor:(MTLClearColor)color {
+
 }
 
 @end

@@ -5,9 +5,9 @@
 //  Created by Bodie Solomon on 2/8/19.
 //
 
-#include "ResourceManager.hpp"
-#include "Drawer.hpp"
-#include "Shaders.h"
+#include "PHXResourceManager.hpp"
+#include "PHXDrawer.hpp"
+#include "PHXShaders.h"
 
 @implementation PHXResourceManager {
     // Note that the view and device are owned by the creator of this resource,
