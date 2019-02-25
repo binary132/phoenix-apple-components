@@ -100,5 +100,5 @@ add_library(MetalPhoenixRenderer STATIC IMPORTED)
 set_target_properties(
   MetalPhoenixRenderer
   PROPERTIES
-  IMPORTED_LOCATION ${PhoenixAppleComponents_LIB_DIR}
+  IMPORTED_LOCATION ${MetalPhoenixRenderer_LIB_DIR}
 )
