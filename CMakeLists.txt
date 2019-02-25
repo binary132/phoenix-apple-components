@@ -1,4 +1,4 @@
-project(phoenix-apple-components-cmake NONE)
+project(PhoenixAppleComponentsCMake NONE)
 
 cmake_minimum_required(VERSION 3.13)
 
@@ -49,10 +49,10 @@ macro(ConfigureXcodeBuildCommand
   )
 endmacro()
 
-set(phoenix-apple-components_DIR ${CMAKE_CURRENT_LIST_DIR})
-set(phoenix-apple-components_BUILD_DIR ${phoenix-apple-components_DIR}/cmake-build)
+set(PhoenixAppleComponents_DIR ${CMAKE_CURRENT_LIST_DIR})
+set(PhoenixAppleComponents_BUILD_DIR ${PhoenixAppleComponents_DIR}/cmake-build)
 set(XCODE_PROJ phoenix-apple-components.xcodeproj)
-set(XCODE_SCHEME phoenix-apple-components)
+set(XCODE_SCHEME PHXRenderer)
 
 if(IOS)
   set(XCODE_SCHEME ${XCODE_SCHEME}-iOS)
@@ -64,23 +64,24 @@ else()
 endif()
 
 # TODO: Switch to github.com/phoenix-engine/build-tools
+# TODO: Support Debug build?
 ConfigureXcodeBuildCommand(
   "Release"
-  ${phoenix-apple-components_BUILD_DIR}
+  ${PhoenixAppleComponents_BUILD_DIR}
   ${XCODE_PROJ}
   ${XCODE_SCHEME}
-  ${XCODE_SDK} # Optional SDK parameter, if unset won't be used.
+  ${XCODE_SDK} # Optional SDK parameter, which if unset won't be used.
 )
 
 include(ExternalProject)
 ExternalProject_Add(
-  phoenix-apple-components
-  PREFIX ${phoenix-apple-components_DIR}
-  BINARY_DIR ${phoenix-apple-components_DIR}
-  STAMP_DIR ${phoenix-apple-components_BUILD_DIR}/cmake-stamp
-  DOWNLOAD_DIR ${phoenix-apple-components_BUILD_DIR}/cmake-download
-  SOURCE_DIR ${phoenix-apple-components_DIR}/src
-  TMP_DIR ${phoenix-apple-components_BUILD_DIR}/tmp
+  PhoenixAppleComponents
+  PREFIX ${PhoenixAppleComponents_DIR}
+  BINARY_DIR ${PhoenixAppleComponents_DIR}
+  STAMP_DIR ${PhoenixAppleComponents_BUILD_DIR}/cmake-stamp
+  DOWNLOAD_DIR ${PhoenixAppleComponents_BUILD_DIR}/cmake-download
+  SOURCE_DIR ${PhoenixAppleComponents_DIR}/src
+  TMP_DIR ${PhoenixAppleComponents_BUILD_DIR}/tmp
 
   CONFIGURE_COMMAND ""
 
@@ -91,13 +92,13 @@ ExternalProject_Add(
   USES_TERMINAL_BUILD TRUE
 )
 
-SET(phoenix-apple-components_INCLUDE_DIR ${phoenix-apple-components_DIR}/include)
+SET(MetalPhoenixRenderer_INCLUDE_DIR ${PhoenixAppleComponents_DIR}/include)
 SET(MetalPhoenixRenderer_LIB_DIR ${SYM_ROOT})
 
-# IMPORTED refers to the external file
+# IMPORTED means the file is generated outside of CMake.
 add_library(MetalPhoenixRenderer STATIC IMPORTED)
 set_target_properties(
   MetalPhoenixRenderer
   PROPERTIES
-  IMPORTED_LOCATION ${MetalPhoenixRenderer_LIB_DIR}
+  IMPORTED_LOCATION ${PhoenixAppleComponents_LIB_DIR}
 )
