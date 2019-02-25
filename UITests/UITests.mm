@@ -13,22 +13,28 @@
 
 @end
 
-@implementation UITests
+@implementation UITests {
+    
+}
 
 - (void)setUp {
     self.continueAfterFailure = NO;
 
     // UI tests must launch the application that they test. Doing this in setup
     // will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
+    [[XCUIApplication new] launch];
 }
 
-- (void)tearDown {
-}
+- (void)tearDown {}
 
 - (void)testMakeWithView {
     // Use XCTAssert, etc.
-//    [PHXRenderer makeWithView: self.view];
+    auto q = [XCUIElementQuery alloc];
+    auto pred = [NSPredicate predicateWithFormat:@"%K like %@", @"identifier", @"controller"];
+    auto pRenderer = [q elementMatchingPredicate: pred];
+    
+    // This doesn't seem to work.
+    NSLog(@"Found element %@", pRenderer);
 }
 
 @end
