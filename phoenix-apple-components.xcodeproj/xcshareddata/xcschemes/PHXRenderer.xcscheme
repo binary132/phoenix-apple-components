@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8885731A2215A910001F2C7F"
-               BuildableName = "MetalPhoenixTestingApp.app"
-               BlueprintName = "MetalPhoenixTestingApp"
+               BlueprintIdentifier = "888572CF220C68BB001F2C7F"
+               BuildableName = "libMetalPhoenixRenderer.a"
+               BlueprintName = "MetalPhoenixRenderer"
                ReferencedContainer = "container:phoenix-apple-components.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "888572EF220CEF9B001F2C7F"
-               BuildableName = "UITests.xctest"
-               BlueprintName = "UITests"
+               BlueprintIdentifier = "888572D9220CEA6F001F2C7F"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:phoenix-apple-components.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8885731A2215A910001F2C7F"
-            BuildableName = "MetalPhoenixTestingApp.app"
-            BlueprintName = "MetalPhoenixTestingApp"
+            BlueprintIdentifier = "888572CF220C68BB001F2C7F"
+            BuildableName = "libMetalPhoenixRenderer.a"
+            BlueprintName = "MetalPhoenixRenderer"
             ReferencedContainer = "container:phoenix-apple-components.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8885731A2215A910001F2C7F"
-            BuildableName = "MetalPhoenixTestingApp.app"
-            BlueprintName = "MetalPhoenixTestingApp"
+            BlueprintIdentifier = "888572CF220C68BB001F2C7F"
+            BuildableName = "libMetalPhoenixRenderer.a"
+            BlueprintName = "MetalPhoenixRenderer"
             ReferencedContainer = "container:phoenix-apple-components.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8885731A2215A910001F2C7F"
-            BuildableName = "MetalPhoenixTestingApp.app"
-            BlueprintName = "MetalPhoenixTestingApp"
+            BlueprintIdentifier = "888572CF220C68BB001F2C7F"
+            BuildableName = "libMetalPhoenixRenderer.a"
+            BlueprintName = "MetalPhoenixRenderer"
             ReferencedContainer = "container:phoenix-apple-components.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

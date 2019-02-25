@@ -4,17 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MetalPhoenix.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>PHXMetal.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>4</integer>
 		</dict>
-		<key>PhoenixTestingApp.xcscheme_^#shared#^_</key>
+		<key>PHXRenderer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
-		<key>Renderer.xcscheme_^#shared#^_</key>
+		<key>PhoenixTestingApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
@@ -22,16 +27,31 @@
 		<key>Tests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<key>UITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>8830580F22185B35006B7E3C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>888572CF220C68BB001F2C7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>888572D9220CEA6F001F2C7F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>888572EF220CEF9B001F2C7F</key>
 		<dict>
 			<key>primary</key>

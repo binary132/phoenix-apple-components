@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		888572DD220CEA6F001F2C7F /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 888572DC220CEA6F001F2C7F /* Tests.m */; };
-		888572E6220CEB68001F2C7F /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 888572E5220CEB68001F2C7F /* Renderer.mm */; };
+		888572DD220CEA6F001F2C7F /* Tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 888572DC220CEA6F001F2C7F /* Tests.mm */; };
+		888572E6220CEB68001F2C7F /* PHXRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 888572E5220CEB68001F2C7F /* PHXRenderer.mm */; };
 		888572F3220CEF9C001F2C7F /* UITests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 888572F2220CEF9C001F2C7F /* UITests.mm */; };
 		888572FB220CF1D2001F2C7F /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888572F9220CF1C1001F2C7F /* MetalKit.framework */; };
 		88857302220CF429001F2C7F /* PHXMetal.metal in Sources */ = {isa = PBXBuildFile; fileRef = 88857301220CF429001F2C7F /* PHXMetal.metal */; };
-		8885730B220DABBE001F2C7F /* ResourceManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88857309220DABBE001F2C7F /* ResourceManager.mm */; };
-		8885730C220DABBE001F2C7F /* ResourceManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8885730A220DABBE001F2C7F /* ResourceManager.hpp */; };
-		8885730F221312A8001F2C7F /* Drawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8885730E221312A8001F2C7F /* Drawer.mm */; };
+		8885730B220DABBE001F2C7F /* PHXResourceManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 88857309220DABBE001F2C7F /* PHXResourceManager.mm */; };
+		8885730C220DABBE001F2C7F /* PHXResourceManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8885730A220DABBE001F2C7F /* PHXResourceManager.hpp */; };
+		8885730F221312A8001F2C7F /* PHXDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8885730E221312A8001F2C7F /* PHXDrawer.mm */; };
 		8885731F2215A910001F2C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8885731E2215A910001F2C7F /* AppDelegate.m */; };
 		888573252215A910001F2C7F /* GameViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 888573242215A910001F2C7F /* GameViewController.mm */; };
 		8885732A2215A912001F2C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888573292215A912001F2C7F /* Assets.xcassets */; };
 		8885732D2215A912001F2C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8885732B2215A912001F2C7F /* Main.storyboard */; };
 		888573302215A912001F2C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8885732F2215A912001F2C7F /* main.m */; };
-		888573352215A975001F2C7F /* libRenderer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888572D0220C68BB001F2C7F /* libRenderer.a */; };
-		888573362215A98E001F2C7F /* libRenderer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888572D0220C68BB001F2C7F /* libRenderer.a */; };
+		888573352215A975001F2C7F /* libMetalPhoenixRenderer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888572D0220C68BB001F2C7F /* libMetalPhoenixRenderer.a */; };
+		888573362215A98E001F2C7F /* libMetalPhoenixRenderer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888572D0220C68BB001F2C7F /* libMetalPhoenixRenderer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,24 +63,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		888572D0220C68BB001F2C7F /* libRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8830581722185B93006B7E3C /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		883058192218670C006B7E3C /* Renderer_impl.hxx */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer_impl.hxx; sourceTree = "<group>"; };
+		888572D0220C68BB001F2C7F /* libMetalPhoenixRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMetalPhoenixRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		888572DA220CEA6F001F2C7F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		888572DC220CEA6F001F2C7F /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		888572DC220CEA6F001F2C7F /* Tests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Tests.mm; sourceTree = "<group>"; };
 		888572DE220CEA6F001F2C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		888572E5220CEB68001F2C7F /* Renderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
-		888572E7220CEB8E001F2C7F /* Renderer.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		888572E5220CEB68001F2C7F /* PHXRenderer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXRenderer.mm; sourceTree = "<group>"; };
+		888572E7220CEB8E001F2C7F /* PHXRenderer.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = PHXRenderer.hpp; sourceTree = "<group>"; };
 		888572F0220CEF9B001F2C7F /* UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		888572F2220CEF9C001F2C7F /* UITests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UITests.mm; sourceTree = "<group>"; };
 		888572F4220CEF9C001F2C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		888572F9220CF1C1001F2C7F /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		888572FF220CF429001F2C7F /* PHXMetal.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = PHXMetal.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
+		888572FF220CF429001F2C7F /* MetalPhoenix.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = MetalPhoenix.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
 		88857301220CF429001F2C7F /* PHXMetal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PHXMetal.metal; sourceTree = "<group>"; };
-		88857306220CF479001F2C7F /* Shaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shaders.h; sourceTree = "<group>"; };
-		88857309220DABBE001F2C7F /* ResourceManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourceManager.mm; sourceTree = "<group>"; };
-		8885730A220DABBE001F2C7F /* ResourceManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourceManager.hpp; sourceTree = "<group>"; };
-		8885730E221312A8001F2C7F /* Drawer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Drawer.mm; sourceTree = "<group>"; };
-		88857310221315F1001F2C7F /* Drawer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Drawer.hpp; sourceTree = "<group>"; };
-		8885731B2215A910001F2C7F /* PhoenixTestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixTestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88857306220CF479001F2C7F /* PHXShaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHXShaders.h; sourceTree = "<group>"; };
+		88857309220DABBE001F2C7F /* PHXResourceManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXResourceManager.mm; sourceTree = "<group>"; };
+		8885730A220DABBE001F2C7F /* PHXResourceManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXResourceManager.hpp; sourceTree = "<group>"; };
+		8885730E221312A8001F2C7F /* PHXDrawer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PHXDrawer.mm; sourceTree = "<group>"; };
+		88857310221315F1001F2C7F /* PHXDrawer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PHXDrawer.hpp; sourceTree = "<group>"; };
+		8885731B2215A910001F2C7F /* MetalPhoenixTestingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalPhoenixTestingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8885731D2215A910001F2C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8885731E2215A910001F2C7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		888573232215A910001F2C7F /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -109,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888573362215A98E001F2C7F /* libRenderer.a in Frameworks */,
+				888573362215A98E001F2C7F /* libMetalPhoenixRenderer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,21 +126,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888573352215A975001F2C7F /* libRenderer.a in Frameworks */,
+				888573352215A975001F2C7F /* libMetalPhoenixRenderer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8830581422185B45006B7E3C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8830581722185B93006B7E3C /* Renderer.hpp */,
+				883058192218670C006B7E3C /* Renderer_impl.hxx */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		888572D1220C68BB001F2C7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				888572D0220C68BB001F2C7F /* libRenderer.a */,
+				888572D0220C68BB001F2C7F /* libMetalPhoenixRenderer.a */,
 				888572DA220CEA6F001F2C7F /* Tests.xctest */,
 				888572F0220CEF9B001F2C7F /* UITests.xctest */,
-				888572FF220CF429001F2C7F /* PHXMetal.metallib */,
-				8885731B2215A910001F2C7F /* PhoenixTestingApp.app */,
+				888572FF220CF429001F2C7F /* MetalPhoenix.metallib */,
+				8885731B2215A910001F2C7F /* MetalPhoenixTestingApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +157,7 @@
 		888572D5220CEA43001F2C7F /* src */ = {
 			isa = PBXGroup;
 			children = (
-				888572E8220CEBA0001F2C7F /* Renderer */,
+				888572E8220CEBA0001F2C7F /* PHXRenderer */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -154,20 +165,20 @@
 		888572DB220CEA6F001F2C7F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				888572DC220CEA6F001F2C7F /* Tests.m */,
+				888572DC220CEA6F001F2C7F /* Tests.mm */,
 				888572DE220CEA6F001F2C7F /* Info.plist */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		888572E8220CEBA0001F2C7F /* Renderer */ = {
+		888572E8220CEBA0001F2C7F /* PHXRenderer */ = {
 			isa = PBXGroup;
 			children = (
-				888572E7220CEB8E001F2C7F /* Renderer.hpp */,
-				888572E5220CEB68001F2C7F /* Renderer.mm */,
+				888572E7220CEB8E001F2C7F /* PHXRenderer.hpp */,
+				888572E5220CEB68001F2C7F /* PHXRenderer.mm */,
 				8885730D2213128C001F2C7F /* ResourceManager */,
 			);
-			path = Renderer;
+			path = PHXRenderer;
 			sourceTree = "<group>";
 		};
 		888572F1220CEF9C001F2C7F /* UITests */ = {
@@ -193,7 +204,7 @@
 		88857300220CF429001F2C7F /* PHXMetal */ = {
 			isa = PBXGroup;
 			children = (
-				88857306220CF479001F2C7F /* Shaders.h */,
+				88857306220CF479001F2C7F /* PHXShaders.h */,
 				88857301220CF429001F2C7F /* PHXMetal.metal */,
 			);
 			path = PHXMetal;
@@ -202,10 +213,10 @@
 		8885730D2213128C001F2C7F /* ResourceManager */ = {
 			isa = PBXGroup;
 			children = (
-				8885730A220DABBE001F2C7F /* ResourceManager.hpp */,
-				88857309220DABBE001F2C7F /* ResourceManager.mm */,
-				88857310221315F1001F2C7F /* Drawer.hpp */,
-				8885730E221312A8001F2C7F /* Drawer.mm */,
+				8885730A220DABBE001F2C7F /* PHXResourceManager.hpp */,
+				88857309220DABBE001F2C7F /* PHXResourceManager.mm */,
+				88857310221315F1001F2C7F /* PHXDrawer.hpp */,
+				8885730E221312A8001F2C7F /* PHXDrawer.mm */,
 			);
 			path = ResourceManager;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 		888D362B220C644F00847170 = {
 			isa = PBXGroup;
 			children = (
+				8830581422185B45006B7E3C /* include */,
 				888572D5220CEA43001F2C7F /* src */,
 				888D3632220C646400847170 /* README.md */,
 				888572DB220CEA6F001F2C7F /* Tests */,
@@ -247,16 +259,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8885730C220DABBE001F2C7F /* ResourceManager.hpp in Headers */,
+				8885730C220DABBE001F2C7F /* PHXResourceManager.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		888572CF220C68BB001F2C7F /* Renderer */ = {
+		888572CF220C68BB001F2C7F /* MetalPhoenixRenderer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 888572D4220C68BB001F2C7F /* Build configuration list for PBXNativeTarget "Renderer" */;
+			buildConfigurationList = 888572D4220C68BB001F2C7F /* Build configuration list for PBXNativeTarget "MetalPhoenixRenderer" */;
 			buildPhases = (
 				888572CC220C68BB001F2C7F /* Headers */,
 				888572CD220C68BB001F2C7F /* Sources */,
@@ -267,9 +279,9 @@
 			dependencies = (
 				888573162215A5C7001F2C7F /* PBXTargetDependency */,
 			);
-			name = Renderer;
+			name = MetalPhoenixRenderer;
 			productName = Renderer;
-			productReference = 888572D0220C68BB001F2C7F /* libRenderer.a */;
+			productReference = 888572D0220C68BB001F2C7F /* libMetalPhoenixRenderer.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		888572D9220CEA6F001F2C7F /* Tests */ = {
@@ -309,9 +321,9 @@
 			productReference = 888572F0220CEF9B001F2C7F /* UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		888572FE220CF429001F2C7F /* PHXMetal */ = {
+		888572FE220CF429001F2C7F /* MetalPhoenix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88857303220CF429001F2C7F /* Build configuration list for PBXNativeTarget "PHXMetal" */;
+			buildConfigurationList = 88857303220CF429001F2C7F /* Build configuration list for PBXNativeTarget "MetalPhoenix" */;
 			buildPhases = (
 				888572FD220CF429001F2C7F /* Sources */,
 			);
@@ -319,14 +331,14 @@
 			);
 			dependencies = (
 			);
-			name = PHXMetal;
+			name = MetalPhoenix;
 			productName = PHXMetal;
-			productReference = 888572FF220CF429001F2C7F /* PHXMetal.metallib */;
+			productReference = 888572FF220CF429001F2C7F /* MetalPhoenix.metallib */;
 			productType = "com.apple.product-type.metal-library";
 		};
-		8885731A2215A910001F2C7F /* PhoenixTestingApp */ = {
+		8885731A2215A910001F2C7F /* MetalPhoenixTestingApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 888573322215A912001F2C7F /* Build configuration list for PBXNativeTarget "PhoenixTestingApp" */;
+			buildConfigurationList = 888573322215A912001F2C7F /* Build configuration list for PBXNativeTarget "MetalPhoenixTestingApp" */;
 			buildPhases = (
 				888573172215A910001F2C7F /* Sources */,
 				888573182215A910001F2C7F /* Frameworks */,
@@ -337,9 +349,9 @@
 			dependencies = (
 				8885733A2215AA38001F2C7F /* PBXTargetDependency */,
 			);
-			name = PhoenixTestingApp;
+			name = MetalPhoenixTestingApp;
 			productName = PhoenixTestingApp;
-			productReference = 8885731B2215A910001F2C7F /* PhoenixTestingApp.app */;
+			productReference = 8885731B2215A910001F2C7F /* MetalPhoenixTestingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -381,11 +393,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				888572CF220C68BB001F2C7F /* Renderer */,
+				888572FE220CF429001F2C7F /* MetalPhoenix */,
+				888572CF220C68BB001F2C7F /* MetalPhoenixRenderer */,
+				8885731A2215A910001F2C7F /* MetalPhoenixTestingApp */,
 				888572D9220CEA6F001F2C7F /* Tests */,
 				888572EF220CEF9B001F2C7F /* UITests */,
-				888572FE220CF429001F2C7F /* PHXMetal */,
-				8885731A2215A910001F2C7F /* PhoenixTestingApp */,
 			);
 		};
 /* End PBXProject section */
@@ -421,9 +433,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888572E6220CEB68001F2C7F /* Renderer.mm in Sources */,
-				8885730F221312A8001F2C7F /* Drawer.mm in Sources */,
-				8885730B220DABBE001F2C7F /* ResourceManager.mm in Sources */,
+				888572E6220CEB68001F2C7F /* PHXRenderer.mm in Sources */,
+				8885730F221312A8001F2C7F /* PHXDrawer.mm in Sources */,
+				8885730B220DABBE001F2C7F /* PHXResourceManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888572DD220CEA6F001F2C7F /* Tests.m in Sources */,
+				888572DD220CEA6F001F2C7F /* Tests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,27 +478,27 @@
 /* Begin PBXTargetDependency section */
 		888572E1220CEA6F001F2C7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 888572CF220C68BB001F2C7F /* Renderer */;
+			target = 888572CF220C68BB001F2C7F /* MetalPhoenixRenderer */;
 			targetProxy = 888572E0220CEA6F001F2C7F /* PBXContainerItemProxy */;
 		};
 		888573122215A5B7001F2C7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 888572CF220C68BB001F2C7F /* Renderer */;
+			target = 888572CF220C68BB001F2C7F /* MetalPhoenixRenderer */;
 			targetProxy = 888573112215A5B7001F2C7F /* PBXContainerItemProxy */;
 		};
 		888573162215A5C7001F2C7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 888572FE220CF429001F2C7F /* PHXMetal */;
+			target = 888572FE220CF429001F2C7F /* MetalPhoenix */;
 			targetProxy = 888573152215A5C7001F2C7F /* PBXContainerItemProxy */;
 		};
 		888573382215A9A7001F2C7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8885731A2215A910001F2C7F /* PhoenixTestingApp */;
+			target = 8885731A2215A910001F2C7F /* MetalPhoenixTestingApp */;
 			targetProxy = 888573372215A9A7001F2C7F /* PBXContainerItemProxy */;
 		};
 		8885733A2215AA38001F2C7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 888572CF220C68BB001F2C7F /* Renderer */;
+			target = 888572CF220C68BB001F2C7F /* MetalPhoenixRenderer */;
 			targetProxy = 888573392215AA38001F2C7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -558,6 +570,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(SRCROOT)/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -623,6 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(SRCROOT)/lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1120,7 +1134,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		888572D4220C68BB001F2C7F /* Build configuration list for PBXNativeTarget "Renderer" */ = {
+		888572D4220C68BB001F2C7F /* Build configuration list for PBXNativeTarget "MetalPhoenixRenderer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				888572D2220C68BB001F2C7F /* Debug */,
@@ -1147,7 +1161,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88857303220CF429001F2C7F /* Build configuration list for PBXNativeTarget "PHXMetal" */ = {
+		88857303220CF429001F2C7F /* Build configuration list for PBXNativeTarget "MetalPhoenix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88857304220CF429001F2C7F /* Debug */,
@@ -1156,7 +1170,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		888573322215A912001F2C7F /* Build configuration list for PBXNativeTarget "PhoenixTestingApp" */ = {
+		888573322215A912001F2C7F /* Build configuration list for PBXNativeTarget "MetalPhoenixTestingApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				888573332215A912001F2C7F /* Debug */,
