@@ -92,7 +92,13 @@ ExternalProject_Add(
   USES_TERMINAL_BUILD TRUE
 )
 
-SET(MetalPhoenixRenderer_INCLUDE_DIR ${PhoenixAppleComponents_DIR}/include)
+# Specify the include dir for CMake projects which import Phoenix.
+find_path(MetalPhoenixRenderer_INCLUDE_DIR
+  "Renderer.hpp"
+  PATHS "${PhoenixAppleComponents_DIR}"
+  PATH_SUFFIXES "include"
+)
+
 SET(MetalPhoenixRenderer_LIB_DIR ${SYM_ROOT})
 
 # IMPORTED means the file is generated outside of CMake.
