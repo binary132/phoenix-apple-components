@@ -1,9 +1,0 @@
-@PACKAGE_INIT@
-
-# set(MetalPhoenixRenderer_DIR "@PACKAGE_INSTALL_FULL_INCLUDEDIR@")
-set(MetalPhoenixRenderer_DIR "@PhoenixAppleComponents_DIR@")
-set(MetalPhoenixRenderer_INCLUDE_DIR "@MetalPhoenixRenderer_INCLUDE_DIR@")
-# set(MetalPhoenixRenderer_DATA_DIR    "/usr/local/" )
-
-#...logic to determine installedPrefix from the own location...
-# set(MetalPhoenixRenderer_CONFIG_DIR  "${installedPrefix}/" )
