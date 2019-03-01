@@ -1,6 +1,13 @@
-project(PhoenixAppleComponentsCMake NONE)
+cmake_policy(SET CMP0048 NEW)
 
-cmake_minimum_required(VERSION 3.13)
+project(PhoenixAppleComponentsCMake
+  VERSION 0.0.0.1
+  DESCRIPTION "A CMake build for the Xcode MetalPhoenix components"
+  HOMEPAGE_URL "https://github.com/phoenix-engine/phoenix-apple-components"
+  LANGUAGES NONE
+)
+
+cmake_minimum_required(VERSION 3.1)
 
 # ConfigureXcodeBuildCommand prepares an `xcodebuild` shell invocation
 # to run the build.  BUILD_MODE should be something like "Release" or
@@ -99,12 +106,55 @@ find_path(MetalPhoenixRenderer_INCLUDE_DIR
   PATH_SUFFIXES "include"
 )
 
-SET(MetalPhoenixRenderer_LIB_DIR ${SYM_ROOT})
+# Hardcode "Release" for now.
+SET(MetalPhoenixRenderer_LIB_DIR ${SYM_ROOT}/Release)
 
-# IMPORTED means the file is generated outside of CMake.
+# IMPORTED means the file was generated outside of CMake.
 add_library(MetalPhoenixRenderer STATIC IMPORTED)
 set_target_properties(
   MetalPhoenixRenderer
   PROPERTIES
   IMPORTED_LOCATION ${MetalPhoenixRenderer_LIB_DIR}
+)
+
+# Set variables for use in the CMake meta-build.
+set(INCLUDE_INSTALL_DIR include/)
+set(LIB_INSTALL_DIR ${SYM_ROOT}/)
+
+# Configure the CMake project variables for usage by downstreams.
+# See https://cmake.org/cmake/help/latest/module/CMakePackageConfigHelpers.html
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+  # The cmake.in file is the template file which will be elaborated.
+  MetalPhoenixRendererConfig.cmake.in
+
+  # The .cmake file is the product of the template elaboration.  It will
+  # be consumed by a downstream build which imports this project.
+  MetalPhoenixRendererConfig.cmake
+
+  # INSTALL_DESTINATION is the path where the generated Config.cmake
+  # file will be installed.
+  INSTALL_DESTINATION ${CMAKE_CURRENT_LIST_DIR}/cmake
+
+  # PATH_VARS specifies the install paths of the products of this Config
+  # package.
+  # PATH_VARS artifacts/Release
+  PATH_VARS INCLUDE_INSTALL_DIR LIB_INSTALL_DIR
+
+  # [NO_SET_AND_CHECK_MACRO]
+  # NO_CHECK_REQUIRED_COMPONENTS_MACRO
+
+  # INSTALL_PREFIX specifies the location the package will be installed.
+  # In this case, the package is intended to be used from within the
+  # build tree, rather than from a system lib directory.
+  #
+  # A future binary-only build could set this to a system lib install
+  # directory.
+  INSTALL_PREFIX ${CMAKE_CURRENT_LIST_DIR}
+)
+
+write_basic_package_version_file(
+  MetalPhoenixRenderer-version.cmake
+  VERSION 0.0.1
+  COMPATIBILITY SameMinorVersion
 )
